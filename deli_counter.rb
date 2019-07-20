@@ -1,12 +1,20 @@
 katz_deli=[]
 
 def line(array)
-line = []
+line_array = []
 if array.length == 0 
   puts "The line is currently empty."
-elsif array.each.with_index(1) do |name, index|
+  
+  else
+    array.each.with_index(1) do |name, index|
       line_array.push("#{index}. #{name}")
-      puts "The line is currently: #{line_array.join (" ")}
     end
+    puts "The line is currently: #{line_array.join(" ")}"
+  end
+end
 
+def take_a_number(katz_deli,name)
+ if katz_deli.unshift(name)
+  puts "Welcome, #{name}. You are number #{katz_deli.length} in line."
+  elsif katz_deli == [1]
 end
